@@ -22,11 +22,11 @@ app.get('/home', function(req, res) {
 });
 
 //get localhost:3000/students
-app.get('students', function(req, res) {
+app.get('/students', function(req, res) {
     const students = studentDb.getAll();
     res.render('students/index', {
         students
-    });
+    })
 });
 
 //listening to port 3000
